@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert t<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 
 <head>
     <div th:replace="fragments/header :: header"/>
+    <style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+}
+</style>
 </head>
 
 <body>
@@ -17,8 +22,12 @@
 <div class="container">
 
     <h1 class="jumbotron">
-        <span sec:authentication="name"></span>tracking your order.
+        Tracking <span sec:authentication="name"></span>'s Orders
+        
+         
     </h1>
+    <h3>Order ID: OBJC386754</h3>
+    <h3>Tracking ID: TUHE9476863</h3>
 
     <div class="alert alert-info" th:if="${outOfStockMessage}" th:utext="${outOfStockMessage}"></div>
 
@@ -26,6 +35,34 @@
         <div class="panel-heading">
             <h1>Product1</h1>
             <h3>Virtual IT Bundle Core</h3>
+            <table>
+            	<tr>
+            		<td>NBNCo Fibre Access</td>
+            		<td>Delivered</td>
+            		<td>on 17th Jan 2018</td>
+            	</tr>
+            	<tr>
+            		<td>Cisco Virtual Network</td>
+            		<td>Implemented</td>
+            		<td>on 18th Jan 2018</td>
+            	</tr>
+            	<tr>
+            		<td>Cisco Virtual Firewall</td>
+            		<td>implemented</td>
+            		<td>on 18th Jan 2018</td>
+            	</tr>
+            	<tr>
+            		<td>Liberated Cloud IAAS Cluster</td>
+            		<td>In Progress</td>
+            		<td>---</td>
+            	</tr>
+            	<tr>
+            		<td>Liberated Cloud ERP SASS Installation</td>
+            		<td>In Progress</td>
+            		<td>---</td>
+            	</tr>
+            	
+            </table>
         </div>
         <div class="row panel-body">
             <div th:inline="text" class="col-md-2">Price: 12500</div>
@@ -39,6 +76,18 @@
         <div class="panel-heading">
             <h1>Product3</h1>
             <h3>Virtual IT Bundle NBNCo</h3>
+            <table>
+            	<tr>
+            		<td>NBNCo Fibre Access</td>
+            		<td>Dispatched</td>
+            		<td>---</td>
+            	</tr>
+            	<tr>
+            		<td>Liberated Cloud IAAS Cluster</td>
+            		<td>In Progress</td>
+            		<td>---</td>
+            	</tr>
+            </table>
         </div>
         <div class="row panel-body">
             <div th:inline="text" class="col-md-2">Price: 6500</div>
@@ -50,19 +99,14 @@
 
     <div class="row panel-body">
         <h2 class="col-md-11" th:inline="text">Total: 19000.00</h2>
-        <a th:href="@{'/TrsckOrder'}" class="col-md-1">
-            <button type="button" class="btn btn-danger" >Track Your Order</button>
+        <a th:href="@{'/home'}" class="col-md-1">
+            <button type="button" class="btn btn-danger" >Home</button>
         </a>
     </div>
 
 </div>
 
 <div th:replace="fragments/footer :: footer"/>
-
-</body>
-</html>itle here</title>
-</head>
-<body>
 
 </body>
 </html>
