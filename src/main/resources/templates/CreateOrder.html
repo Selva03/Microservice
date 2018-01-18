@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 
 <head>
     <div th:replace="fragments/header :: header"/>
@@ -10,9 +11,46 @@
 <div th:replace="fragments/header :: navbar"/>
 
 <div class="container">
-    <div class="starter-template">
-        <h1>Order Crested</h1>
+
+    <h1 class="jumbotron">
+        <span sec:authentication="name"></span> your order for the following two items has been placed successfully, your order ID is OBJC386754.
+    </h1>
+
+    <div class="alert alert-info" th:if="${outOfStockMessage}" th:utext="${outOfStockMessage}"></div>
+
+    <div class="panel-default well">
+        <div class="panel-heading">
+            <h1>Product1</h1>
+            <h3>Virtual IT Bundle Core</h3>
+        </div>
+        <div class="row panel-body">
+            <div th:inline="text" class="col-md-2">Price: 12500</div>
+            <div th:inline="text" class="col-md-9">Quantity: 1</div>
+            
+        </div>
+        <br></br>
     </div>
+    
+    <div class="panel-default well">
+        <div class="panel-heading">
+            <h1>Product3</h1>
+            <h3>Virtual IT Bundle NBNCo</h3>
+        </div>
+        <div class="row panel-body">
+            <div th:inline="text" class="col-md-2">Price: 6500</div>
+            <div th:inline="text" class="col-md-9">Quantity: 1</div>
+            
+        </div>
+        <br></br>
+    </div>
+
+    <div class="row panel-body">
+        <h2 class="col-md-11" th:inline="text">Total: 19000.00</h2>
+        <a th:href="@{'/TrsckOrder'}" class="col-md-1">
+            <button type="button" class="btn btn-danger" >Track Your Order</button>
+        </a>
+    </div>
+
 </div>
 
 <div th:replace="fragments/footer :: footer"/>
