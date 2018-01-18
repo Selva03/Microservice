@@ -67,7 +67,7 @@ public class HomeController {
  	public ModelAndView product2() {
          ModelAndView modelAndView = new ModelAndView();
          
-         modelAndView.setViewName("CreateOrder");
+         modelAndView.setViewName("Product2");
          return modelAndView;
      }
     
@@ -76,7 +76,7 @@ public class HomeController {
  	public ModelAndView product3() {
          ModelAndView modelAndView = new ModelAndView();
          
-         modelAndView.setViewName("CreateOrder");
+         modelAndView.setViewName("Product3");
          return modelAndView;
      }
     
@@ -85,7 +85,7 @@ public class HomeController {
  	public ModelAndView product4() {
          ModelAndView modelAndView = new ModelAndView();
          
-         modelAndView.setViewName("CreateOrder");
+         modelAndView.setViewName("Product4");
          return modelAndView;
      }
  // view each product bundle details
@@ -93,7 +93,7 @@ public class HomeController {
  	public ModelAndView product5() {
          ModelAndView modelAndView = new ModelAndView();
          
-         modelAndView.setViewName("CreateOrder");
+         modelAndView.setViewName("Product5");
          return modelAndView;
      }
     
