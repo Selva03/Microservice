@@ -2,6 +2,7 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 
 <head>
+
 </head>
 
 <body>
@@ -9,8 +10,10 @@
 <div th:fragment="products">
     <div class="panel-default well" th:each="product : ${products}">
         <div class="panel-heading">
+        
             <h1><a th:text="${product.name}" th:href="@{'/product/' + ${product.id}}">Title</a></h1>
         </div>
+        
         <h3 th:text="${product.description}" class="panel-body">Description</h3>
         <div class="row panel-footer">
             <div th:inline="text" class="col-md-2">Price: [[${product.price}]] $</div>
