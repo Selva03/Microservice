@@ -42,7 +42,7 @@ public class ShoppingCartController {
         return shoppingCart();
     }
 
-    @GetMapping("/shoppingCart/checkout")
+   /* @GetMapping("/shoppingCart/checkout")
     public ModelAndView checkout() {
         try {
             shoppingCartService.checkout();
@@ -50,5 +50,16 @@ public class ShoppingCartController {
             return shoppingCart().addObject("outOfStockMessage", e.getMessage());
         }
         return shoppingCart();
+    } */
+    
+    @GetMapping("/shoppingCart/checkout")
+    public String Checkout() {
+        try {
+            shoppingCartService.checkout();
+        } catch (NotEnoughProductsInStockException e) {
+            //return shoppingCart().addObject("outOfStockMessage", e.getMessage());
+        }
+        return "/CreateOrder";
     }
+    
 }

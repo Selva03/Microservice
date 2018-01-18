@@ -18,6 +18,8 @@ public interface ShoppingCartService {
     Map<Product, Integer> getProductsInCart();
 
     void checkout() throws NotEnoughProductsInStockException;
-
+    
+    void order();
+    
     BigDecimal getTotal();
 }

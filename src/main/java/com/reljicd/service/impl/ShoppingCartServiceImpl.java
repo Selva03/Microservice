@@ -89,8 +89,15 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         productRepository.save(products.keySet());
         productRepository.flush();
         products.clear();
+        
     }
-
+    
+    @Override
+    public void order()
+    {
+    	Product product;
+    }
+    
     @Override
     public BigDecimal getTotal() {
         BigDecimal total = BigDecimal.ZERO;
