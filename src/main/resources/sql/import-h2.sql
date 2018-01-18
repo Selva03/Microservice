@@ -29,10 +29,10 @@ VALUES (3, 2);
 INSERT INTO PRODUCT (name, description, quantity, price)
 VALUES ('Product1', 'Virtual IT Bundle Core', 3, 12500.00);
 INSERT INTO PRODUCT (name, description, quantity, price)
-VALUES ('Product2', 'Virtual IT Bundle Cisco', 9, 3000.00);
+VALUES ('Product2', 'Virtual IT Bundle Cisco', 9, 9000.00);
 INSERT INTO PRODUCT (name, description, quantity, price)
-VALUES ('Product3', 'Virtual IT Bundle NBNCo', 5, 3500.00);
+VALUES ('Product3', 'Virtual IT Bundle NBNCo', 5, 6500.00);
 INSERT INTO PRODUCT (name, description, quantity, price)
-VALUES ('Product4', 'Virtual IT Service Bundle', 7, 4500.00);
+VALUES ('Product4', 'Virtual IT Service Bundle', 7, 8500.00);
 INSERT INTO PRODUCT (name, description, quantity, price)
-VALUES ('Product5', 'Virtual IT Network Bundle', 3, 6500.00);
+VALUES ('Product5', 'Virtual IT Network Bundle', 3, 9500.00);
