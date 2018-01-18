@@ -52,5 +52,51 @@ public class HomeController {
         modelAndView.setViewName("home");
         return modelAndView;
     }
-
+    
+    // view each product bundle details
+    @GetMapping("/product/1")
+ 	public ModelAndView product1() {
+         ModelAndView modelAndView = new ModelAndView();
+         
+         modelAndView.setViewName("Product1");
+         return modelAndView;
+     }
+    
+ // view each product bundle details
+    @GetMapping("/product/2")
+ 	public ModelAndView product2() {
+         ModelAndView modelAndView = new ModelAndView();
+         
+         modelAndView.setViewName("CreateOrder");
+         return modelAndView;
+     }
+    
+ // view each product bundle details
+    @GetMapping("/product/3")
+ 	public ModelAndView product3() {
+         ModelAndView modelAndView = new ModelAndView();
+         
+         modelAndView.setViewName("CreateOrder");
+         return modelAndView;
+     }
+    
+ // view each product bundle details
+    @GetMapping("/product/4")
+ 	public ModelAndView product4() {
+         ModelAndView modelAndView = new ModelAndView();
+         
+         modelAndView.setViewName("CreateOrder");
+         return modelAndView;
+     }
+ // view each product bundle details
+    @GetMapping("/product/5")
+ 	public ModelAndView product5() {
+         ModelAndView modelAndView = new ModelAndView();
+         
+         modelAndView.setViewName("CreateOrder");
+         return modelAndView;
+     }
+    
+    
+ 
 }
